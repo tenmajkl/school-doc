@@ -22,8 +22,6 @@ $application->get('config')->load();
 /** @var \Lemon\Routing\Router $router */
 $router = $application->get('routing');
 
-$router->file('routes.web')
-    ->middleware(Csrf::class)
-;
+$router->file('routes.web');
 
 return $application;
