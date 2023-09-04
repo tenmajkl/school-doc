@@ -1,0 +1,4 @@
+{
+    "$schema": "/Users/misa/.local/share/nvim/site/pack/packer/opt/phpactor/phpactor.schema.json",
+    "language_server_phpstan.enabled": false
+}
