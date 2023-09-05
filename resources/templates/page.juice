@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/app.css">
 </head>
-<body class="bg-slate-900 text-white">
+<body class="bg-primary text-secondary">
     <div class="grid grid-cols-5 xl:grid-cols-8 2xl:grid-cols-10">
-        <div class="flex-col justify-between h-screen p-3 md:border-r-2 md:border-violet-900 shadow-2xl col-span-5 md:col-span-1 md:flex hidden" id="sidebar">
+        <div class="flex-col justify-between h-screen p-3 md:border-r-2 md:border-yellow shadow-2xl col-span-5 md:col-span-1 md:flex hidden" id="sidebar">
             <div>
-                <div class="text-xl">Zapisy</div>
+                <div class="text-2xl">Zapisy</div>
                 { foreach $categories as $index => ['title' => $title, 'items' => $items] } 
                         <div><span class="font-bold">{{ $index + 1 }}.</span> {{ text('subjects.'.$title) }}</div>
                         { foreach $items as $inner => [$item, $slug] }

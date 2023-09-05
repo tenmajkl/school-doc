@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./resources/templates/*.juice'],
   theme: {
-    extend: {},
+    colors: {
+        'primary': '#282828',
+        'secondary': '#ebdbb2',
+        'yellow': '#d79921'
+    },
   },
   plugins: [],
 }
