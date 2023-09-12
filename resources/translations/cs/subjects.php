@@ -13,4 +13,5 @@ return [
     'pr' => 'Programovani',
     'ze' => 'Zemepis',
     'zv' => 'ZSV',
+    'soc' => 'SOCka',
 ];
