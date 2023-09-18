@@ -32,7 +32,7 @@
             </svg> 
         </div>
         <div class="p-3 w-full md:block col-span-5 md:col-span-4 xl:col-span-7 2xl:col-span-9 markdown" id="content">
-            {! (new \Majkel\Mathdown\Mathdown())->text($content) !}
+            {! (new \App\Markdown())->text($content) !}
         </div>
     </div>
 </body>
