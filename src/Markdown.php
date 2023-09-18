@@ -48,7 +48,7 @@ class Markdown extends Mathdown
                 'extent' => 2,
                 'element' => [
                     'name' => 'span',
-                    'rawHtml' => '&#45;',
+                    'rawHtml' => '&ndash;',
                 ],
             ];
         }
