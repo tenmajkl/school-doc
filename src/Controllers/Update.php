@@ -43,6 +43,28 @@ class Update
 
         file_put_contents($app->file('storage.categories', 'php'), 
             '<?php return '.var_export($categories, true).';'
-        ); 
+        );
+
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => env('DISCORD_WEBHOOK'),
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => json_encode([
+                'embeds' => [
+                    [
+                        'title' => 'Zmeny v zapisech lidi!!!',
+                        'description' => exec('cd '.$file.'; git log --name-status --format= -1 .'),
+                        'color' => 0xffff00,
+                    ]
+                ]
+            ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+            CURLOPT_HTTPHEADER => [
+                "Content-Type: application/json"
+            ]
+        ]);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
     }
 }
