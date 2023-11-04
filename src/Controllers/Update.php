@@ -46,6 +46,7 @@ class Update
         );
 
         $ch = curl_init();
+        $file = $app->file('storage.materials'); 
 
         curl_setopt_array($ch, [
             CURLOPT_URL => env('DISCORD_WEBHOOK'),
